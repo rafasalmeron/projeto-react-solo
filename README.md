@@ -1,5 +1,5 @@
 # React + Vite
-![printDoClone](https://github.com/user-attachments/assets/85a5d996-0b41-45ea-afa8-72ac9fd725f1)
+![pritnDoClone](https://github.com/user-attachments/assets/ee8dda19-4c4a-467f-892f-7cfb22fe1682)
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
