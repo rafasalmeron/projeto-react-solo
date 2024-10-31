@@ -30,7 +30,6 @@ export const Card = styled.div`
     display: flex;
     flex-direction: column;
     width: 304px;
-    height: 637px;
     background-color: #fff;
     border-radius: 10px;
     margin: 0 118px;
@@ -82,6 +81,7 @@ export const Div2 = styled.div`
 export const P3 = styled.p`
     font-size: 16px;
     padding: 0 8px;
+    font-family: 'open sans', sans-serif;
 `
 export const A1 = styled.a`
     margin: 8px 0 0;

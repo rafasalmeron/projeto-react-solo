@@ -51,7 +51,7 @@ function Login() {
                             />
                         </Box>
                         <A1 href="#"><strong>Esqueceu a senha?</strong></A1>
-                        <Span><Checkbox defaultChecked size="small"/>Me mantenha na conta</Span>
+                        {/*<Span><Checkbox defaultChecked size="small"/>Me mantenha na conta</Span>*/}
                         <Button>Entrar</Button>
                     </Form>
                     <div>
@@ -65,13 +65,13 @@ function Login() {
                         </Span2>
                         <div>
                             <Button2><LogoSocial src={google}/>  Continue with Google</Button2>
-                            <Button2><LogoSocial src={microsoft}/> Entrar com a conta da Microsoft</Button2>
+                            {/* <Button2><LogoSocial src={microsoft}/> Entrar com a conta da Microsoft</Button2> */}
                             <Button2><LogoSocial src={apple}/>  Entrar com a Apple</Button2>
                         </div>
                     </div>
                 </Card>
                 <Div2>
-                    <P3>Ainda não faz parte do Linkedin? <A1><strong>Cadastre-se agora</strong></A1></P3>
+                    <P3>Ainda não faz parte do Linkedin? <A1>Cadastre-se agora</A1></P3>
                 </Div2>
             </Main>
             <Footer>
