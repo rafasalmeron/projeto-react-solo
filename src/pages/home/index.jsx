@@ -1,4 +1,4 @@
-import {Container, Conteiner2, HeaderStyle, Logo, Main} from "./styled.jsx";
+import {ContainerPrincipal, Conteiner2, HeaderStyle, Logo, Main} from "./styled.jsx";
 import logoHome from "../../assets/LI-In-Bug.png";
 import {useEffect, useState} from "react";
 import NavBar from "./components/NavBar.jsx";
@@ -12,25 +12,15 @@ const Home = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [pokemons, setPokemons] = useState([]);
     const openModal = () => setIsModalOpen(prevState => !prevState);
-    let offset = 0;
 
-    const pegarPokemon = () => {
-        axios
-            .get(`${BASE_URL}/pokemon?limit=20&offset=${offset}`)
-            .then(({ data }) => {
-                const newPokemon = [];
-                data.results.forEach((p) => newPokemon.push(p.name));
-                setPokemons((oldPokemon) => [...oldPokemon, ...newPokemon]);
-            });
-        offset += 20;
-    };
-
-    const handleScroll = (e) => {
-        if (
-            window.innerHeight + e.target.documentElement.scrollTop + 1 >=
-            e.target.documentElement.scrollHeight
-        ) {
-            pegarPokemon();
+    const pegarPokemon = async () => {
+        try {
+            const response = await axios.get(`${BASE_URL}/pokemon`);
+            const newPokemon = [];
+            response.data.results.forEach((p) => newPokemon.push(p.name));
+            setPokemons((oldPokemon) => [...oldPokemon, ...newPokemon]);
+        }catch (error) {
+            console.log(error)
         }
     };
     useEffect(() => {
@@ -51,10 +41,10 @@ const Home = () => {
 
     useEffect(() => {
         pegarPokemon();
-        window.addEventListener("scroll", handleScroll);
     }, []);
+
     return (
-        <Container>
+        <ContainerPrincipal>
             <HeaderStyle>
                 <Logo src={logoHome} alt={"Logo"}/>
                 <NavBar
@@ -69,7 +59,7 @@ const Home = () => {
                     <SideBarRight />
                 </Main>
             </Conteiner2>
-        </Container>
+        </ContainerPrincipal>
     )
 }
 export default Home

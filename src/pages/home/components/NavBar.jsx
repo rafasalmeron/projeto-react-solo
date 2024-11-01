@@ -59,8 +59,11 @@ const NavBar = ({openModal, isModalOpen}) => {
                 <FotoPerfil onClick={openModal} src={Foto} alt={'fotoPerfil'}/>
                 {isModalOpen && (
                     <Modal>
-                        <h2>Modal Title</h2>
-                        <p>This is the content of the modal.</p>
+                        <h2>Menu</h2>
+                        <p>coisas do perfil</p>
+                        <p>bla</p>
+                        <p>bla</p>
+                        <p>bla</p>
                     </Modal>
                 )}
             </SpanContainer>

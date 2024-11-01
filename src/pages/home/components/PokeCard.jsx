@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import {Conteiner} from "../styled.jsx";
 import PokemonThumbnail from "./PokemonThumnail.js.jsx";
 
 const  PokeCard  = (props) => {
@@ -24,6 +23,8 @@ const  PokeCard  = (props) => {
                 console.log(err);
             });
     };
+    console.log(pokemon
+    )
     return (
         <>
             {pokemon && (

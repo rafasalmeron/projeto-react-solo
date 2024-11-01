@@ -3,8 +3,7 @@ import { ModalWrapper} from "../styled.jsx";
 
 const Modal = ({children}) => {
     return  <ModalWrapper className="modal-content">
-        {children}
-    </ModalWrapper>
+                 {children}
+            </ModalWrapper>
 };
-
 export default Modal;
