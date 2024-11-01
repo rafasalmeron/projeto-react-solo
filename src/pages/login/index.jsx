@@ -14,7 +14,6 @@ function Login() {
                         Ainda não faz parte do Linkedin?
                         <A1>Cadastre-se agora</A1>
                     </P3>
-
                 </Div2>
             </Main>
             <Footer />

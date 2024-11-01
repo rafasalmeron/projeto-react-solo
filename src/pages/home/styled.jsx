@@ -9,9 +9,14 @@ export const ContainerPrincipal = styled.div`
 export const HeaderStyle = styled.header`
     display: flex;
     align-items: center;
+    position: fixed; 
+    top: 0; 
+    left: 0;
     row-gap: 50px;
     height: 53px;
     border: 1px solid #e1e9ee;
+    background-color: #f3f2ef;
+    z-index: 10000;
     
 `;
 export const Logo = styled.img`
@@ -97,6 +102,7 @@ export const Conteiner2 = styled.div`
     border-radius: 8px;
 `
 export const Main = styled.main`
+    padding-top: 80px;
     display: flex;
     @media (min-width: 768px) {
         display: grid;
