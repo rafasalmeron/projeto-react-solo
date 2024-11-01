@@ -2,39 +2,48 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
     display: flex;
-    justify-content: space-between;
-    align-items: center;
     flex-direction: column;
     height: 100vh;
     width: 100vw;
+    @media (min-width: 768px) {
+        align-items: center;
+        justify-content: space-between;
+    }
 `
 export const Logo = styled.img`
     margin: 32px 32px 16px;
     width: 110px;
     height: 28px;
 `
-export const Header = styled.header`
+export const HeaderStyle = styled.header`
     display: flex;
     width: 100%;
     height: 80px;
 `
 export const Main = styled.main`
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
     width: 100%;
     height: 100%;
+    @media (max-width: 768px) {
+        justify-content: flex-start;
+    }
+    align-items: center;
+    @media (min-width: 768px) {
+        justify-content: center;
+    }
 `
-export const Card = styled.div`
+export const CardStyle = styled.div`
     display: flex;
     flex-direction: column;
     width: 304px;
     background-color: #fff;
     border-radius: 10px;
-    margin: 0 118px;
-    padding: 24px;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    margin: 0 118px 50px 118px;
+    @media (min-width: 768px) {
+        padding: 24px;
+        box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
+    }
 `
 export const H1 = styled.h1`
     font-family: 'open sans', sans-serif;
@@ -48,7 +57,7 @@ export const P = styled.p`
     font-family: 'open sans', sans-serif;
     line-height: 1.5;
 `
-export const Form = styled.form`
+export const FormStyle = styled.form`
     display: flex;
     justify-content: left;
     align-items: center;
@@ -69,19 +78,27 @@ export const Button = styled.button`
     color: #fff;
     font-size: 18px;
     font-weight: 500;
-    margin: 16px 0;
+    margin-top: 15px;
+    margin-bottom: 0;
     cursor: pointer; 
 `
 export const Div = styled.div`
     padding-bottom: 0 20px;
 `
 export const Div2 = styled.div`
-    margin: 32px 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 `
 export const P3 = styled.p`
     font-size: 16px;
     padding: 0 8px;
     font-family: 'open sans', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 `
 export const A1 = styled.a`
     margin: 8px 0 0;
@@ -108,7 +125,7 @@ export const A2 = styled.a`
     }
 `
 export const Span2 = styled.span`
-    padding: 8px;
+    padding: 8px 0 8px 0;
     font-size: 12px;
     font-family: 'open sans', sans-serif;
 `
@@ -135,11 +152,16 @@ export const LogoSocial = styled.img`
 `
 export const P2 = styled.p`
     color: gray;
+    padding-bottom: 20px;
+    padding-top: 10px;
 `
-export const Footer = styled.footer`
+export const FooterStyle = styled.footer`
     height: 72px;
     display: flex;
     align-items: center;
+    @media (max-width: 768px) {
+        display: none;
+    }
 `
 export const LogoFooter = styled.img`
     width: 56px;
